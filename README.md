@@ -40,5 +40,15 @@ Berikut adalah alur proses login: <br>
 •	Code Label Back berfungsi untuk kembali ke form Login saat label “Back” diklik. Program membuka objek form Login, menampilkannya di layar, lalu menutup form yang sedang aktif agar dapat kembali ke halaman login dengan mudah.
  <img width="563" height="89" alt="image" src="https://github.com/user-attachments/assets/4877212e-bdd1-431f-87e9-9dd4aa919335" />
 
+# jFrame Daftar
+•	Desain frame Daftar <br>
+ <img width="381" height="240" alt="image" src="https://github.com/user-attachments/assets/3a77f0ba-9ffd-4e94-bddd-0489b4a3274d" />
+
+•	Code Daftar berfungsi berfungsi untuk membuat akun baru saat tombol Daftar ditekan. Program memeriksa apakah kolom username dan password telah diisi; jika belum, muncul pesan peringatan. Jika sudah, sistem menggunakan JPA untuk mengecek apakah username tersebut sudah terdaftar di database. Jika sudah ada, muncul pesan bahwa username harus diganti. Jika belum, data baru disimpan ke database, transaksi dikonfirmasi, dan pesan “Sukses dibuat” ditampilkan. Setelah itu, form pendaftaran ditutup dan form Login dibuka agar akun baru bisa langsung digunakan untuk masuk.
+ <img width="610" height="416" alt="image" src="https://github.com/user-attachments/assets/2b5a0d7a-49b0-4bb4-80e7-71b63e1be18d" />
+
+•	Code Back berfungsi untuk kembali ke form Login saat label “Back” diklik. Program membuat objek form Login, menampilkannya di layar, lalu menutup form yang sedang aktif agar dapat berpindah Kembali ke halaman login.
+ <img width="550" height="94" alt="image" src="https://github.com/user-attachments/assets/e0492d0d-6113-46cf-bd46-ce67bd0b7407" />
+
 
 
