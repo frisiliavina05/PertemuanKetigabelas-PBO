@@ -5,9 +5,9 @@ Pada pertemuan ke 13 ini merupakan implementasi form login berbasis Java yang me
 - Login menggunakan username dan password <br>
 - Validasi data ke database menggunakan EntityManager <br>
 - Pesan hasil login: ✔ Berhasil → diarahkan ke halaman utama (Dashboard), ❌ Gagal → pesan kesalahan (username/password salah
-- 
+  
 # Mekanisme Login Menggunakan JPA
-Berikut adalah alur proses login: <br>
+Alur proses login: <br>
 - Pengguna memasukkan username dan password. <br>
 - Aplikasi mengirim permintaan query ke database melalui EntityManager. <br>
 - JPA melakukan pencarian data dengan JPQL (Java Persistence Query Language). <br>
@@ -44,7 +44,7 @@ Berikut adalah alur proses login: <br>
 •	Desain frame Daftar <br>
  <img width="381" height="240" alt="image" src="https://github.com/user-attachments/assets/3a77f0ba-9ffd-4e94-bddd-0489b4a3274d" />
 
-•	Code Daftar berfungsi berfungsi untuk membuat akun baru saat tombol Daftar ditekan. Program memeriksa apakah kolom username dan password telah diisi; jika belum, muncul pesan peringatan. Jika sudah, sistem menggunakan JPA untuk mengecek apakah username tersebut sudah terdaftar di database. Jika sudah ada, muncul pesan bahwa username harus diganti. Jika belum, data baru disimpan ke database, transaksi dikonfirmasi, dan pesan “Sukses dibuat” ditampilkan. Setelah itu, form pendaftaran ditutup dan form Login dibuka agar akun baru bisa langsung digunakan untuk masuk.
+•	Code Daftar berfungsi berfungsi untuk membuat akun baru saat tombol Daftar ditekan. Program memeriksa apakah kolom username dan password telah diisi; jika belum, muncul pesan peringatan. Jika sudah, sistem menggunakan JPA untuk mengecek apakah username tersebut sudah terdaftar di database. Jika sudah ada, muncul pesan bahwa username harus diganti. Jika belum, data baru disimpan ke database, transaksi dikonfirmasi, dan pesan “Sukses dibuat” ditampilkan. Setelah itu, form pendaftaran ditutup dan form Login dibuka agar akun baru bisa langsung digunakan untuk masuk. <br>
  <img width="610" height="416" alt="image" src="https://github.com/user-attachments/assets/2b5a0d7a-49b0-4bb4-80e7-71b63e1be18d" />
 
 •	Code Back berfungsi untuk kembali ke form Login saat label “Back” diklik. Program membuat objek form Login, menampilkannya di layar, lalu menutup form yang sedang aktif agar dapat berpindah Kembali ke halaman login.
