@@ -18,26 +18,26 @@ Alur proses login: <br>
 •	Desain frame Login <br>
  <img width="368" height="246" alt="image" src="https://github.com/user-attachments/assets/ee652d7b-dfd5-41ec-986d-77feb267a7fd" />
  
-•	Code Button Masuk berfungsi sebagai proses login menggunakan JPA. Saat tombol Masuk ditekan, program memeriksa apakah username dan password terisi, lalu mencari data pengguna di database. Jika username tidak ditemukan, muncul pesan “Data tidak ditemukan”; jika password sesuai, tampil pesan “Selamat datang, [username]” dan form Dashboard dibuka; namun jika salah, muncul pesan “Password salah”. Setelah itu, transaksi diselesaikan dan koneksi database ditutup.
+•	Code Button Masuk berfungsi sebagai proses login menggunakan JPA. Saat tombol Masuk ditekan, program memeriksa apakah username dan password terisi, lalu mencari data pengguna di database. Jika username tidak ditemukan, muncul pesan “Data tidak ditemukan”; jika password sesuai, tampil pesan “Selamat datang, [username]” dan form Dashboard dibuka; namun jika salah, muncul pesan “Password salah”. Setelah itu, transaksi diselesaikan dan koneksi database ditutup. <br>
  <img width="609" height="384" alt="image" src="https://github.com/user-attachments/assets/35c1dc78-8c03-4972-99fd-a3b29d3249ef" />
  
-•	Code Label Lupa password berfungsi untuk membuka form ResetPassword saat label “Lupa Password” diklik. Program akan menampilkan form reset password (r.setVisible(true)) dan menutup form login yang sedang aktif (this.dispose()).
+•	Code Label Lupa password berfungsi untuk membuka form ResetPassword saat label “Lupa Password” diklik. Program akan menampilkan form reset password (r.setVisible(true)) dan menutup form login yang sedang aktif (this.dispose()). <br>
  <img width="554" height="90" alt="image" src="https://github.com/user-attachments/assets/172c57a7-c5ab-42cf-852d-ed19d56e5768" />
  
-•	Code Label Daftar berfungsi untuk membuka form Daftar ketika label “Daftar” diklik. Program akan membuat objek form Daftar, menampilkannya di layar, lalu menutup form yang sedang aktif agar dapat langsung melakukan proses pendaftaran akun baru.
+•	Code Label Daftar berfungsi untuk membuka form Daftar ketika label “Daftar” diklik. Program akan membuat objek form Daftar, menampilkannya di layar, lalu menutup form yang sedang aktif agar dapat langsung melakukan proses pendaftaran akun baru. <br>
  <img width="554" height="94" alt="image" src="https://github.com/user-attachments/assets/62e16d95-bbd1-40e1-aaea-1bb3b5b9e9d2" />
  
 # jFrame Reset Password
 •	Desain frame ResetPassword <br>
  <img width="375" height="214" alt="image" src="https://github.com/user-attachments/assets/72702551-e532-4697-abf8-201327a125bb" />
 
-•	Code Button Cari berfungsi untuk mencari data pengguna berdasarkan username saat tombol Cari ditekan. Program terlebih dahulu memeriksa apakah kolom username sudah diisi. Jika belum, muncul pesan peringatan. Jika sudah, program menggunakan JPA untuk mencari data pengguna di database. Jika data tidak ditemukan, muncul pesan “Data tidak ditemukan”. Namun jika ditemukan, form akan menampilkan kolom dan tombol untuk mengganti password, mengunci input username agar tidak diubah, dan memfokuskan kursor ke kolom password baru. Setelah itu, transaksi diselesaikan dan koneksi database ditutup.
+•	Code Button Cari berfungsi untuk mencari data pengguna berdasarkan username saat tombol Cari ditekan. Program terlebih dahulu memeriksa apakah kolom username sudah diisi. Jika belum, muncul pesan peringatan. Jika sudah, program menggunakan JPA untuk mencari data pengguna di database. Jika data tidak ditemukan, muncul pesan “Data tidak ditemukan”. Namun jika ditemukan, form akan menampilkan kolom dan tombol untuk mengganti password, mengunci input username agar tidak diubah, dan memfokuskan kursor ke kolom password baru. Setelah itu, transaksi diselesaikan dan koneksi database ditutup. <br>
  <img width="560" height="288" alt="image" src="https://github.com/user-attachments/assets/ae2e9283-f538-46e7-a219-5f94e0f22bb7" />
 
 •	Code Button Simpan berfungsi untuk menyimpan perubahan password saat tombol Simpan ditekan. Program terlebih dahulu memeriksa apakah kolom password sudah diisi. Jika belum, muncul pesan peringatan. Jika sudah, program menggunakan JPA untuk mengambil data pengguna berdasarkan username, kemudian memperbarui password di database dengan nilai baru. Setelah transaksi disimpan (commit), sistem menampilkan pesan “Berhasil diubah”, menutup form saat ini, dan membuka kembali form Login agar pengguna dapat masuk menggunakan password yang baru diperbarui. <br>
  <img width="606" height="336" alt="image" src="https://github.com/user-attachments/assets/600a29c6-6f7d-4ea2-8ad3-c728eb6dc870" />
 
-•	Code Label Back berfungsi untuk kembali ke form Login saat label “Back” diklik. Program membuka objek form Login, menampilkannya di layar, lalu menutup form yang sedang aktif agar dapat kembali ke halaman login dengan mudah.
+•	Code Label Back berfungsi untuk kembali ke form Login saat label “Back” diklik. Program membuka objek form Login, menampilkannya di layar, lalu menutup form yang sedang aktif agar dapat kembali ke halaman login dengan mudah. <br>
  <img width="563" height="89" alt="image" src="https://github.com/user-attachments/assets/4877212e-bdd1-431f-87e9-9dd4aa919335" />
 
 # jFrame Daftar
@@ -47,7 +47,7 @@ Alur proses login: <br>
 •	Code Daftar berfungsi berfungsi untuk membuat akun baru saat tombol Daftar ditekan. Program memeriksa apakah kolom username dan password telah diisi; jika belum, muncul pesan peringatan. Jika sudah, sistem menggunakan JPA untuk mengecek apakah username tersebut sudah terdaftar di database. Jika sudah ada, muncul pesan bahwa username harus diganti. Jika belum, data baru disimpan ke database, transaksi dikonfirmasi, dan pesan “Sukses dibuat” ditampilkan. Setelah itu, form pendaftaran ditutup dan form Login dibuka agar akun baru bisa langsung digunakan untuk masuk. <br>
  <img width="610" height="416" alt="image" src="https://github.com/user-attachments/assets/2b5a0d7a-49b0-4bb4-80e7-71b63e1be18d" />
 
-•	Code Back berfungsi untuk kembali ke form Login saat label “Back” diklik. Program membuat objek form Login, menampilkannya di layar, lalu menutup form yang sedang aktif agar dapat berpindah Kembali ke halaman login.
+•	Code Back berfungsi untuk kembali ke form Login saat label “Back” diklik. Program membuat objek form Login, menampilkannya di layar, lalu menutup form yang sedang aktif agar dapat berpindah Kembali ke halaman login. <br>
  <img width="550" height="94" alt="image" src="https://github.com/user-attachments/assets/e0492d0d-6113-46cf-bd46-ce67bd0b7407" />
 
 
