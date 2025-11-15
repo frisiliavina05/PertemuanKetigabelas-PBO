@@ -15,13 +15,10 @@ Berikut adalah alur proses login: <br>
 # jFrame Login
 •	Desain frame Login
  <img width="368" height="246" alt="image" src="https://github.com/user-attachments/assets/ee652d7b-dfd5-41ec-986d-77feb267a7fd" />
-
 •	Code Button Masuk berfungsi sebagai proses login menggunakan JPA. Saat tombol Masuk ditekan, program memeriksa apakah username dan password terisi, lalu mencari data pengguna di database. Jika username tidak ditemukan, muncul pesan “Data tidak ditemukan”; jika password sesuai, tampil pesan “Selamat datang, [username]” dan form Dashboard dibuka; namun jika salah, muncul pesan “Password salah”. Setelah itu, transaksi diselesaikan dan koneksi database ditutup.
  <img width="609" height="384" alt="image" src="https://github.com/user-attachments/assets/35c1dc78-8c03-4972-99fd-a3b29d3249ef" />
-
 •	Code Label Lupa password berfungsi untuk membuka form ResetPassword saat label “Lupa Password” diklik. Program akan menampilkan form reset password (r.setVisible(true)) dan menutup form login yang sedang aktif (this.dispose()).
  <img width="554" height="90" alt="image" src="https://github.com/user-attachments/assets/172c57a7-c5ab-42cf-852d-ed19d56e5768" />
-
 •	Code Label Daftar berfungsi untuk membuka form Daftar ketika label “Daftar” diklik. Program akan membuat objek form Daftar, menampilkannya di layar, lalu menutup form yang sedang aktif agar dapat langsung melakukan proses pendaftaran akun baru.
  <img width="554" height="94" alt="image" src="https://github.com/user-attachments/assets/62e16d95-bbd1-40e1-aaea-1bb3b5b9e9d2" />
 
