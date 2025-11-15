@@ -1,13 +1,28 @@
-# Implementasi Form Login dengan Menggunakan JPA
+# Form Login dengan Menggunakan JPA
 Pada pertemuan ke 13 ini merupakan implementasi form login berbasis Java yang menggunakan Java Persistence API (JPA) untuk melakukan proses autentikasi pengguna secara terstruktur dan efisien. Aplikasi ini menghubungkan antarmuka grafis (GUI) berbasis Java Swing dengan database melalui konsep Object Relational Mapping (ORM). Dengan memanfaatkan Entity dan EntityManager, proses verifikasi username dan password dilakukan secara otomatis tanpa penulisan query SQL secara manual.
 
-# 1. Form Login
-Form login merupakan fitur penting untuk melakukan autentikasi dan otorisasi pengguna sebelum mengakses sistem utama. Pengguna diminta memasukkan username dan password, lalu sistem akan memverifikasi data dengan database menggunakan Java Persistence API (JPA).
-Aplikasi ini dibuat dengan Java Swing sebagai antarmuka dan memanfaatkan konsep Object Relational Mapping (ORM) agar proses validasi data lebih efisien tanpa menulis query SQL secara manual. Jika data cocok, login berhasil; jika tidak, sistem menampilkan pesan kesalahan.
-# 2. Mekanisme Login Menggunakan JPA
-Proses login dengan Java Persistence API (JPA) diawali saat pengguna memasukkan username dan password pada form login. Aplikasi kemudian menggunakan EntityManager untuk memeriksa data pengguna di database melalui JPQL (Java Persistence Query Language). Jika data sesuai, login dinyatakan berhasil dan pengguna diarahkan ke halaman utama, sedangkan jika tidak, sistem menampilkan pesan kesalahan. Dengan JPA, proses autentikasi menjadi lebih efisien, aman, dan mudah dikelola tanpa perlu menulis query SQL secara manual.
-# 3. Kelebihan Penggunaan JPA dalam Implementasi Login
-- Mempermudah pengelolaan data pengguna karena JPA menghubungkan objek Java langsung dengan tabel database <br>
-- Mengurangi penggunaan query SQL manual sehingga struktur program lebih sederhana dan mudah dikembangkan <br>
-- Dapat digunakan pada berbagai jenis database tanpa perlu banyak perubahan pada kode program <br>
-- Proses autentikasi lebih cepat dan terstruktur, serta mendukung keamanan data pengguna
+# Fitur Utama
+- Login menggunakan username dan password <br>
+- Validasi data ke database menggunakan EntityManager <br>
+- Pesan hasil login: ✔ Berhasil → diarahkan ke halaman utama (Dashboard), ❌ Gagal → pesan kesalahan (username/password salah)
+# Mekanisme Login Menggunakan JPA
+Berikut adalah alur proses login: <br>
+- Pengguna memasukkan username dan password. <br>
+- Aplikasi mengirim permintaan query ke database melalui EntityManager. <br>
+- JPA melakukan pencarian data dengan JPQL (Java Persistence Query Language). <br>
+- Jika data cocok → Akses diberikan. <br>
+- Jika tidak ditemukan → Pesan error ditampilkan.
+# jFrame Login
+•	Desain frame Login
+ <img width="368" height="246" alt="image" src="https://github.com/user-attachments/assets/ee652d7b-dfd5-41ec-986d-77feb267a7fd" />
+
+•	Code Button Masuk berfungsi sebagai proses login menggunakan JPA. Saat tombol Masuk ditekan, program memeriksa apakah username dan password terisi, lalu mencari data pengguna di database. Jika username tidak ditemukan, muncul pesan “Data tidak ditemukan”; jika password sesuai, tampil pesan “Selamat datang, [username]” dan form Dashboard dibuka; namun jika salah, muncul pesan “Password salah”. Setelah itu, transaksi diselesaikan dan koneksi database ditutup.
+ <img width="609" height="384" alt="image" src="https://github.com/user-attachments/assets/35c1dc78-8c03-4972-99fd-a3b29d3249ef" />
+
+•	Code Label Lupa password berfungsi untuk membuka form ResetPassword saat label “Lupa Password” diklik. Program akan menampilkan form reset password (r.setVisible(true)) dan menutup form login yang sedang aktif (this.dispose()).
+ <img width="554" height="90" alt="image" src="https://github.com/user-attachments/assets/172c57a7-c5ab-42cf-852d-ed19d56e5768" />
+
+•	Code Label Daftar berfungsi untuk membuka form Daftar ketika label “Daftar” diklik. Program akan membuat objek form Daftar, menampilkannya di layar, lalu menutup form yang sedang aktif agar dapat langsung melakukan proses pendaftaran akun baru.
+ <img width="554" height="94" alt="image" src="https://github.com/user-attachments/assets/62e16d95-bbd1-40e1-aaea-1bb3b5b9e9d2" />
+
+
