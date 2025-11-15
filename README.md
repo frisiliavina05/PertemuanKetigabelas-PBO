@@ -13,7 +13,7 @@ Berikut adalah alur proses login: <br>
 - Jika data cocok → Akses diberikan. <br>
 - Jika tidak ditemukan → Pesan error ditampilkan.
 # jFrame Login
-•	Desain frame Login
+•	Desain frame Login <br>
  <img width="368" height="246" alt="image" src="https://github.com/user-attachments/assets/ee652d7b-dfd5-41ec-986d-77feb267a7fd" />
  
 •	Code Button Masuk berfungsi sebagai proses login menggunakan JPA. Saat tombol Masuk ditekan, program memeriksa apakah username dan password terisi, lalu mencari data pengguna di database. Jika username tidak ditemukan, muncul pesan “Data tidak ditemukan”; jika password sesuai, tampil pesan “Selamat datang, [username]” dan form Dashboard dibuka; namun jika salah, muncul pesan “Password salah”. Setelah itu, transaksi diselesaikan dan koneksi database ditutup.
